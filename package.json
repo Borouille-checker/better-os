@@ -1,0 +1,15 @@
+{
+  "name": "test_winbox",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "winbox": "^0.2.82"
+  }
+}

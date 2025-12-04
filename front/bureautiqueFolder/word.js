@@ -1,15 +1,13 @@
 export async function word(open_windows) {
 	var max_index = Math.max.apply(Math, open_windows.map(function (window) { return window.index; }));
-	new WinBox({
+	var a = new WinBox({
 		index: max_index + 1,
 		root: document.body,
-		icon: "../assets/word.svg",
 
 		title: "Word",
 		background: "#fff",
 		border: 4,
 		header: 45,
-		icon: true,
 
 		modal: true,
 		max: false,
@@ -32,4 +30,5 @@ export async function word(open_windows) {
 			this.setBackground("#999");
 		},
 	});
+	a.setIcon("../assets/word.svg")
 }

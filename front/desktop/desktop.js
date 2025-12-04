@@ -1,4 +1,4 @@
-import { word } from "../bureautiqueFolder/word.js";
+import { word } from "../bureautiqueFolder/word.js"
 
 Array.prototype.forEach.call(document.getElementsByClassName("bureautiqueFolder"), function (window) {
 	window.onclick = function () { folder("Bureau") };
@@ -9,13 +9,10 @@ async function folder(name) {
 	var win = new WinBox({
 		index: 1,
 		root: document.body,
-		icon: true,
 
 		title: name,
-		background: "#fff",
 		border: 4,
 		header: 45,
-		icon: true,
 
 		maxwidth: 1920,
 		maxheight: 1080,
@@ -26,9 +23,6 @@ async function folder(name) {
 
 		mount: document.getElementById("content").cloneNode(true),
 
-		oncreate: function (options) {
-			options.icon = "../assets/folder.png"
-		},
 		onfocus: function () {
 			this.setBackground("#bbb");
 		},
@@ -41,5 +35,6 @@ async function folder(name) {
 		window.onclick = function () { word(open_windows) };
 	});
 
+	win.setIcon("../assets/word.svg")
 	open_windows.push(win)
 }

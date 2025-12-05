@@ -1,0 +1,34 @@
+export async function sublime(open_windows) {
+	var max_index = Math.max.apply(Math, open_windows.map(function (window) { return window.index; }));
+	var a = new WinBox({
+		index: max_index + 1,
+		root: document.body,
+
+		title: "Sublime Text",
+		background: "#fff",
+		border: 4,
+		header: 45,
+
+		modal: true,
+		max: false,
+		min: false,
+		hidden: false,
+
+		width: 500,
+		height: 700,
+		autosize: false,
+
+		x: "center",
+		y: "center",
+
+		html: "<h1>Sublime Text</h1>",
+
+		onfocus: function () {
+			this.setBackground("#bbb");
+		},
+		onblur: function () {
+			this.setBackground("#999");
+		},
+	});
+	a.setIcon("../assets/word.svg")
+}

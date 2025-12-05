@@ -1,4 +1,4 @@
-import { word } from "../bureautiqueFolder/word.js"
+import { word } from "../foldersApplication/word.js"
 
 Array.prototype.forEach.call(document.getElementsByClassName("bureautiqueFolder"), function (window) {
 	window.onclick = function () { folder("Bureau") };
@@ -35,6 +35,6 @@ async function folder(name) {
 		window.onclick = function () { word(open_windows) };
 	});
 
-	win.setIcon("../assets/word.svg")
+	win.setIcon("../assets/folder.svg")
 	open_windows.push(win)
 }

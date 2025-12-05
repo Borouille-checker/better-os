@@ -2,6 +2,7 @@ html, body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
+	min-height: 100vh;
 	background-image: url("assets/windows-bg.jpg");
 	background-size: cover;
 }
@@ -12,7 +13,7 @@ html, body {
 }
 
 .bureautiqueFolder:hover, .developmentFolder:hover {
-	background-color: rgb(182, 189, 196);
+	filter: brightness(1.2);
 }
 
 #bottombar {
@@ -25,7 +26,6 @@ html, body {
 	background-color: rgba(0, 0, 0, 0.7);
 
 	z-index:9999;
-
 	display: flex;
 	align-items: center;
 	padding: 0 5px;
@@ -44,4 +44,100 @@ html, body {
 	display: flex;
 	gap: 20px;
 	padding: 10px;
+}
+
+.folder {
+	padding: 10px;
+	margin: 20px;
+}
+
+#startMenu {
+	position: relative;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#start-menu {
+	left: 75px;
+	width: 250px;
+	text-align: center;
+	right: 30px;
+}
+
+#start-menu button {
+	width: 100%;
+	padding: 15px;
+	background-color: rgb(54, 81, 107);
+	border: none;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#start-menu button:hover {
+	filter: brightness(1.2);
+}
+
+body.better-os-mode {
+    background-image: url("assets/freedom-bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Modale Plein Écran */
+#sequence-modal {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: black; 
+    color: #00ff00; /* Vert Terminal */
+    z-index: 20000; /* Au-dessus de tout */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.modal-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Animation d'apparition du texte */
+.sequence-line {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    margin: 10px 0;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Bouton final */
+#final-action-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Utilitaire pour cacher */
+.hidden-visibility {
+    visibility: hidden;
+    pointer-events: none;
+    /* Si vous préférez display: none, utilisez display: none ici */
+    /* display: none !important; */
 }

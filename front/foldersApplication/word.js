@@ -4,7 +4,7 @@ export async function word(open_windows) {
 		index: max_index + 1,
 		root: document.body,
 
-		title: "Word",
+		title: "Suite Office",
 		background: "#fff",
 		border: 4,
 		header: 45,
@@ -14,15 +14,23 @@ export async function word(open_windows) {
 		min: false,
 		hidden: false,
 
-		width: 500,
+		width: 600,
 		height: 700,
 		autosize: false,
 
 		x: "center",
 		y: "center",
 
-		html: "<h1>Word</h1>",
-
+		html: "<h1>Pourquoi remplacer la suite Office ?</h1>" +
+		"<p>Pour commencer si vous passez sous Linux, aucun des logiciels Office ne seront disponibles. </p>" +
+		"<p>Pourquoi remplacer la suite Office: Le prix: les tarifs peuvent rapidement atteindre des sommes importantes. </p>" +
+		"<p>La peur que Microsoft utilise vos données à des fins commerciales sans votre consentement.</p>" + 
+		"<h1>Par quoi remplacer la suite Office ?</h1>" +
+		"<ul>   \
+			<li>Libre Office</li>	\
+			<li>Only Office</li>	\
+			<li>OpenOffice</li>     \
+		</ul>",
 		onfocus: function () {
 			this.setBackground("#bbb");
 		},

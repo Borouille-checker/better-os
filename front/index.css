@@ -39,3 +39,9 @@ html, body {
 .windows-menu-button:hover {
 	background-color: rgb(54, 81, 107);
 }
+
+#content-dev, #content-desk {
+	display: flex;
+	gap: 20px;
+	padding: 10px;
+}

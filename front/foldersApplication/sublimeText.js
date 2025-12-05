@@ -30,5 +30,5 @@ export async function sublime(open_windows) {
 			this.setBackground("#999");
 		},
 	});
-	a.setIcon("../assets/word.svg")
+	a.setIcon("../assets/sublime-text-icon.png")
 }

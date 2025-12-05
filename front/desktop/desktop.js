@@ -21,7 +21,7 @@ async function folder(name) {
 		x: "center",
 		y: "center",
 
-		mount: document.getElementById("content").cloneNode(true),
+		mount: document.getElementById("content-desk").cloneNode(true),
 
 		onfocus: function () {
 			this.setBackground("#bbb");
